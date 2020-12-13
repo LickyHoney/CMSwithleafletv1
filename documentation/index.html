@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Vito - Html - Documentation</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="iqonic themes">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link
+        href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+        rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js"
+        integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH"
+        crossorigin="anonymous"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+</head>
+
+<body class="body-green">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="index.html">
+                            <img src="./assets/images/logo.png" alt="logo" class="logo-img">
+                            <span class="text-highlight"><b>Vito</b></span><span class="text-bold">Docs</span>
+                        </a>
+                    </h1>
+
+                </div>
+                <!--//branding-->
+
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Quick Start</li>
+                </ol>
+
+            </div>
+            <!--//container-->
+        </header>
+        <!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div class="doc-body row">
+                    <div class="doc-content col-md-9 col-12 order-1">
+                        <div class="content-inner">
+                            <section id="installation-section" class="doc-section">
+                                <!-- <div id="doc-header" class="doc-header text-center">
+                                <h1 class="doc-title"><i class="icon fa fa-paper-plane"></i> Quick Start</h1>
+                                <div class="meta"><i class="far fa-clock"></i> Last updated: Feb 5th, 2020</div>
+                            </div> -->
+                                <!--//doc-header-->
+                                <h2 class="section-title">Installation</h2>
+                                <div class="section-block">
+                                    <h3 class="block-title">Basic Installation</h3>
+                                    <p>Steps to be followed for getting started with the template:</p>
+                                    <p>There are followings basics packages you should install before going further.</p>
+                                    <ol>
+                                        <li>Setup <a href="#firebase-section">firebase configuration</a></li>
+                                        <li>Open terminal or CMD and go the root directory of the template</li>
+                                        <li>Run in terminal or CMD: <span class="text-highlight">npm install</span></li>
+                                        <li>To Run project on Local environment run: <span class="text-highlight">npm
+                                                start</span></li>
+                                        <li>Then visit: <span class="text-highlight">http://localhost:3000</span></li>
+                                    </ol>
+                                </div>
+                                <!--//section-block-->
+                                <div id="dev-to-prod-section" class="section-block">
+                                    <h3 class="block-title">Development to production</h3>
+                                    <p>Here is the <strong>steps of production:</strong></p>
+                                    <ol>
+                                        <li>If you can deploy in subdirectory first you can copy and rename the
+                                            following file .env.example to .env and set the production path by <span
+                                                class="text-highlight">BASE_URL=""</span> this key</li>
+                                        <li>To Deploy project on server create production build by running: <span
+                                                class="text-highlight"> npm run build </span></li>
+                                        <li>This will generate <span class="text-highlight">/dist</span> folder in
+                                            project root directory you'll have to upload these file using a FTP on your
+                                            server</li>
+                                        <li>Now that you have followed these steps your basic installation is complete
+                                            and ready to flaunt your site to the world.</li>
+                                    </ol>
+                                </div>
+                                <!--//section-block-->
+
+                                <div id="folder-stuc-section" class="section-block">
+                                    <h3 class="block-title">Folder Structure</h3>
+                                    <p>Here is the <strong>general structure of the template:</strong></p>
+                                    <pre><code class="language-markup">
+vito-react
+| - public
+   | - img
+     - favicon.ico
+     - index.html
+
+| - src
+  | - assets
+    | - css
+    | - fonts
+    | - images
+    | - js
+    | - scss
+
+    | - components
+        | - vito
+
+    | - config
+        | - vito
+
+    | - layouts
+        | - AuthLayouts
+            | - AuthLayouts1
+          - BlankLayout
+          - Layout1
+
+    | - helper
+    | - router
+    | - store
+    | - views
+      - App.js
+      - index.js
+      - serviceWorker.js
+  - .editorconfig
+  - .eslintignore.js
+  - .gitignore
+  - babel.config.js
+  - .env
+  - package.json
+  - README.md
+  - webpack.config.js
+                                </code></pre>
+                                </div>
+                                <!--//section-block-->
+                                <div class="section-block">
+                                    <h2 class="block-title">Vito custom components structure</h2>
+                                    <p>Here is the general structure of the vito custom components:</p>
+                                    <pre><code class="language-markup">
+&lt;!-- Vito components --&gt;
+
+| - components
+    | - vito
+        | - breadcrumbs
+            - BreadCrumbStyle1
+        | - calendar
+            - BreadCrumbStyle1
+            - BreadCrumbStyle1
+        | - cards
+            | - DetailCard
+            | - TimelineCard
+            | - UserDetailsCard
+        | - chartStyle
+            | - apexChart
+            | - apexLiveChart
+            | - MapAmChart
+        | - footer
+            | - FooterStyle1
+        | - lottie
+            | - Lottie
+        | - menus
+            | - ListStyle1
+        | - navbars
+            | - NavBarStyle1
+        | - rightsidebar
+            | - RightSideBarStyle1
+        | - sidebar
+            | - SideBarStyle1
+        | - slider
+            | - Slick
+        | - tab
+            | - tab-nav
+            | - tab-nav-item
+            | - tab-content
+            | - tab-content-item
+        | - timeline
+            | - TimeLine
+        | - loader
+            | - Loader
+                                </code></pre>
+                                </div>
+
+                                <div class="section-block" id="for-favicon-section">
+                                    <h3 class="block-title">For Favicon icon</h3>
+                                    <p>Set favicon for replace favicon.ico and restart server</p>
+                                </div>
+                                <div class="section-block" id="for-logo-section">
+                                    <h3 class="block-title">For Logo</h3>
+                                    <p>Use the header style which is in <span class="atv">components -> vito -> Partials
+                                            -> Header</span>. Replace <span class="atv">"logo.png"</span> with your own
+                                        logo image URL.</p>
+                                    <pre><code class="language-markup">
+| - vito-vue
+    | - layouts
+        | - Layout1
+
+&lt;NavBarStyle1
+title={"Dashboard"}
+homeUrl={"/"}
+logo={ require('../../assets/images/logo.gif') }
+breadCrumb={items}
+&gt;</code></pre>
+                                </div>
+
+                            </section>
+                            <!--//doc-section-->
+
+                            <section id="configuration-section" class="doc-section">
+                                <h2 class="section-title">Configuration</h2>
+                                <div id="firebase-section" class="section-block">
+                                    <h3 class="block-title">Firebase</h3>
+                                    <p>For Setup Firebase Goto following file and update keys</p>
+                                    <p><code>src/constant/firebase.js</code></p>
+                                    <pre>
+<code class="language-markup">
+firebaseConfig: {
+    apiKey: YOUR_API_KEY,
+    authDomain: YOUR_AUTH_DOMAIN,
+    databaseURL: YOUR_DATABASE_URL,
+    projectId: YOUR_PROJECT_ID,
+    storageBucket: YOUR_STORAGE_BUCKET,
+    messagingSenderId: YOUR_MESSAGING_SENDER_ID,
+    appId: YOUR_APP_ID
+  },
+</code>
+                                </pre>
+                                </div>
+
+                                <div id="algolia-section" class="section-block">
+                                    <h3 class="block-title">Algolia</h3>
+                                    <p>For Setup Autho Goto following file and update keys and or use .env variable</p>
+                                    <p><code>src/config/algolia.js</code></p>
+                                    <pre>
+<code class="language-markup">
+export const APP_ID = YOUR_APPLICATION_ID
+export const APP_KEY = YOUR_APP_KEY
+</code>
+                        </pre>
+                                </div>
+                            </section>
+                            <!--//doc-section-->
+                            <section id="layout-config-section" class="doc-section">
+                                <h2 class="section-title">Layout Configure</h2>
+                                <div class="section-block">
+                                    <p>Here is the <strong>layout and routing configure</strong></p>
+                                    <pre><code class="language-markup">
+ | - layouts
+    | - AuthLayouts
+        | - AuthLayouts1
+      - BlankLayout
+      - Layout1
+
+                                </code></pre><br>
+                                    <p>Router url configure</p>
+                                    <pre><code class="language-markup">
+&lt;Switch&gt;
+&lt;Route path="/auth/sign-in1" component={SignIn1} /&gt;
+&lt;Route path="/auth/sign-up1" component={SignUp1} /&gt;
+&lt;Route path="/auth/recover-password" component={ResetPassword} /&gt;
+&lt;/Switch&gt;
+                                </code></pre>
+                                </div>
+                                <!--//section-block-->
+                            </section>
+                            <!--//doc-section-->
+                            <section id="sidbar-section" class="doc-section">
+                                <h2 class="section-title">Sidebar & Header</h2>
+                                <div class="section-block">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <p>Here is the <strong>sidebar object example just you can copy and past and
+                                                    rename then title and icon.</strong></p>
+                                            <pre><code class="language-markup">
+[
+    {
+        "title": "Dashboard",
+        "is_heading": true,
+        "is_active": false,
+        "class_name": "",
+        "is_icon_class": true,
+        "icon": ""
+    },
+]
+ 
+                                </code></pre>
+                                        </div>
+                                        <div class="col-md-12 mt-3">
+                                            <p>Sidebar based on json and check the file in spacific path
+                                                ./src/fackData/json/SideBar.json and import or add your array to sidebar
+                                                key.</p>
+                                            <pre><code class=" language-markup">
+// Import JSON Data...
+import sideBarItems from '../../fakeData/json/sideBar';
+    
+&lt;SideBarStyle1
+    items={sideBarItems}
+    logo={ require('../../assets/images/logo.png') }
+    homeUrl={"/"}
+/&gt;
+                                        </code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--//section-block-->
+                            </section>
+                            <!--//doc-section-->
+
+                            <section id="custom-components" class="doc-section">
+                                <h2 class="section-title">Custom Components</h2>
+                                <div id="custom-card" class="section-block">
+                                    <h3 class="block-title">Custom Card</h3>
+                                    <p>We have build different types of custom card components. And these are the some
+                                        prop and slots</p>
+                                    <pre><code class="language-markup">
+import React from 'react';
+
+const Index = (props) =&gt; {
+    return(
+        &lt;&gt;
+            &lt;div className="iq-card "&gt;
+                &lt;div className="iq-card-body"&gt;
+                    &lt;div className="row"&gt;
+                        &lt;div className="col-lg-12 mb-2 d-flex justify-content-between"&gt;
+                            &lt;div className={"icon iq-icon-box rounded-circle rounded-circle "+props.iconClass}&gt;
+                                &lt;i className={props.icon}&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div className="col-lg-12 mt-3"&gt;
+                            &lt;h6 className="card-title text-uppercase text-secondary mb-0"&gt;{props.text}&lt;/h6&gt;
+                            &lt;span className="h2 text-dark mb-0 counter"&gt;{props.counter}&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    {props.updown ? (&lt;p className="mb-0 text-muted mt-3"&gt;{props.updown}&lt;/p&gt;) : ''}
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/&gt;
+    )
+};
+
+export default Index;
+                                        
+                                    </code></pre>
+                                </div>
+                                <!--//section-block-->
+                                <div id="timeline-section" class="section-block">
+                                    <h3 class="block-title">TimeLine</h3>
+                                    <div class="row">
+                                        <div class="col-sm-12 mt-3">
+                                            <p>We have build timeline components. And these are the some prop</p>
+                                            <pre><code class="language-markup">
+import React from "react";
+
+const Index = props =&gt; {
+    const { timeData, color } = props;
+    return (
+        &lt;&gt;
+            &lt;div className={"timeline-dots " + (color !== undefined ?  ("border-" + color) : "")} /&gt;
+            &lt;h6 className={"float-left mb-1"}&gt;{ timeData.title }&lt;/h6&gt;
+            &lt;small className={"float-right mt-1"}&gt;{ timeData.date }&lt;/small&gt;
+            &lt;div className={"d-inline-block w-100"}&gt;
+                &lt;p&gt;{ timeData.description }&lt;/p&gt;
+                { props.children }
+            &lt;/div&gt;
+        &lt;/&gt;
+    )
+};
+
+export default Index;
+                                                
+                                            </code></pre>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div id="lottie-section" class="section-block">
+                                    <h3 class="block-title">Lottie</h3>
+                                    <div class="row">
+                                        <div class="col-sm-12 mt-3">
+                                            <p>We have build lottie components. And these are the some prop</p>
+                                            <pre><code class="language-markup">
+import React from 'react';
+import Lottie from 'react-lottie';
+
+class Index extends React.Component{
+    constructor(props) {
+        super(props);
+        this.state = {isStopped: false, isPaused: false};
+    }
+
+    render() {
+        const defaultOptions = {
+            loop: this.props.loop ? this.props.loop : true,
+            autoplay: this.props.autoplay ? this.props.autoplay : true,
+            animationData: this.props.data,
+            rendererSettings: {
+                preserveAspectRatio: 'xMidYMid slice'
+            }
+        };
+        return (
+            &lt;div className={this.props.className}&gt;
+                &lt;Lottie options={defaultOptions}
+                        isStopped={this.state.isStopped}
+                        isPaused={this.state.isPaused}/&gt;
+            &lt;/div&gt;
+        );
+    }
+}
+
+export default Index;
+                                            </code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </section>
+                            <!--//doc-section-->
+
+                            <section id="bootstrap-section" class="doc-section">
+                                <h3 class="section-title">Bootstrap Components</h3>
+
+                                <div class="section-block">
+                                    <p> Bootstrap has wonderfull documentation on the following components::</p>
+                                    <ul>
+                                        <li>
+                                            <a href="https://reactstrap.github.io/components/layout/" target="black">Row
+                                                Alignments</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://reactstrap.github.io/components/alerts/"
+                                                target="black">Alerts</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://reactstrap.github.io/components/badge/"
+                                                target="black">Badges</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://reactstrap.github.io/components/carousel/"
+                                                target="black">Carousel</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://reactstrap.github.io/components/layout/">Columns</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://reactstrap.github.io/components/tables/">Tables</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://reactstrap.github.io/components/buttons/"
+                                                target="black">Buttons</a>
+                                        </li>
+                                    </ul>
+                                    <p>Vue Bootstrap for extra component <a
+                                            href="https://reactstrap.github.io/components">https://reactstrap.github.io/components</a>
+                                    </p>
+                                </div>
+                            </section>
+
+                            <section id="browser-support-section" class="doc-section">
+                                <h3 class="section-title">Browser Support</h3>
+
+                                <div class="section-block">
+                                    <p>Supports all major Browsers like Google Chrome, Mozilla Firefox, Safari, Opera,
+                                        Internet Explorer 9 and above.</p>
+
+                                </div>
+                            </section>
+                            <section id="change-log-section" class="doc-section">
+                                <h3 class="section-title">Change Log</h3>
+
+                                <div class="section-block">
+                                    <h4>Version 1.0</h4>
+                                    <p>- Initial Release</p>
+                                </div>
+                            </section>
+                            <section id="source-section" class="doc-section">
+                                <h3 class="section-title">Source & Credits</h3>
+
+                                <div class="section-block">
+                                    <p>All images and videos are for preview purposes only and are not included in the
+                                        download files. Images are of copyrights under Creative Commons CC0.</p>
+                                    <br>
+                                    <h4>Images</h4>
+                                    <ul>
+                                        <li>bigstockphoto <a href="https://www.bigstockphoto.com/">bigstockphoto</a>
+                                        </li>
+                                        <li>Pexels <a href="https://www.pexels.com/">Pexels</a></li>
+                                        <li>freepik <a href="http://www.freepik.com/">freepik</a></li>
+                                        <li>pixabay <a href="https://pixabay.com/">pixabay</a></li>
+                                    </ul>
+                                    <br>
+                                    <br>
+                                    <h4>Plugins</h4>
+                                    <ul>
+                                        <li><a href="https://reactjs.org/">React JS</a></li>
+                                        <li><a href="https://reactstrap.github.io/">Reactstrap</a></li>
+                                        <li><a href="https://jquery.com/">Jquery</a></li>
+                                        <li><a href="https://github.com/bas2k/jquery.appear/">Jquery appear</a></li>
+                                        <li><a
+                                                href="https://github.com/glix/jQuery-Plugins/tree/master/Modern-Circular-jQuery-Countdown-Timer-Plugin-Final-Countdown">Countdown</a>
+                                        </li>
+                                        <li><a href="https://fullcalendar.io/docs/vue">Full Calendar</a></li>
+                                        <li><a
+                                                href="https://www.amcharts.com/docs/v4/getting-started/integrations/using-vue-js/">AmChart</a>
+                                        </li>
+                                        <li><a href="https://apexcharts.com/docs/vue-charts/">ApexChart</a></li>
+                                        <li><a href="https://github.com/bbonnin/vue-morris">Vue Morris</a></li>
+                                        <li><a href="https://github.com/guillaumebriday/vue-scroll-progress-bar">Page
+                                                Scroll Progress</a></li>
+                                        <li><a href="https://www.npmjs.com/package/mapbox-gl-vue">Mapbox Gl vue</a></li>
+                                        <li><a href="https://www.npmjs.com/package/vue-slick">Vue Slick Slider</a></li>
+                                        <li><a href="https://airbnb.io/lottie/#/">Lottie</a></li>
+                                    </ul>
+                                    <br>
+                                    <br>
+                                    <h4>CSS & Fonts</h4>
+                                    <ul>
+                                        <li><a href="https://reactstrap.github.io/">Bootstrap React</a></li>
+                                        <li><a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a></li>
+                                        <li><a href="http://ionicons.com/#cdn">ionicons</a></li>
+                                        <li><a href="https://remixicon.com/">remixicon</a></li>
+                                        <li><a href="https://www.google.com/fonts">Google Fonts</a></li>
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+                        <!--//content-inner-->
+                    </div>
+                    <!--//doc-content-->
+                    <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+                        <div id="doc-nav" class="doc-nav">
+
+                            <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+                                <a class="nav-link scrollto" href="#quick-start-section"><strong>Quick
+                                        Start</strong></a>
+                                <nav class="doc-sub-menu nav flex-column">
+                                    <a class="nav-link scrollto" href="#installation-section">Basic Installation</a>
+                                    <a class="nav-link scrollto" href="#dev-to-prod-section">Development To
+                                        Production</a>
+                                    <a class="nav-link scrollto" href="#folder-stuc-section">Folder Structure</a>
+                                    <a class="nav-link scrollto" href="#for-favicon-section">For Favicon</a>
+                                    <a class="nav-link scrollto" href="#for-logo-section">For Logo</a>
+                                </nav>
+                                <!--//nav-->
+                                <a class="nav-link scrollto"
+                                    href="#configuration-section"><strong>Configuration</strong></a>
+                                <nav class="doc-sub-menu nav flex-column">
+                                    <a class="nav-link scrollto" href="#firebase-section">Firebase</a>
+                                    <a class="nav-link scrollto" href="#auth-section">Auth</a>
+                                    <a class="nav-link scrollto" href="#agora-section">Agora Video Call</a>
+                                    <a class="nav-link scrollto" href="#algolia-section">Algolia</a>
+                                </nav>
+                                <!--//nav-->
+                                <a class="nav-link scrollto" href="#layout-config-section">Layout Configure</a>
+
+                                <a class="nav-link scrollto" href="#sidbar-section">Sidebar & Header</a>
+
+                                <a class="nav-link scrollto" href="#custom-components"><strong>Custom
+                                        Components</strong></a>
+                                <nav class="doc-sub-menu nav flex-column">
+                                    <a class="nav-link scrollto" href="#custom-card">Custom Card</a>
+                                    <a class="nav-link scrollto" href="#chart-section">Chart</a>
+                                    <a class="nav-link scrollto" href="#tab-section">Tab</a>
+                                    <a class="nav-link scrollto" href="#timeline-section">TimeLine</a>
+                                    <a class="nav-link scrollto" href="#slider-section">Slider</a>
+                                    <a class="nav-link scrollto" href="#lottie-section">Lottie</a>
+                                </nav>
+                                <!--//nav-->
+
+
+
+                                <a class="nav-link scrollto" href="#bootstrap-section">Bootstrap Components</a>
+                                <a class="nav-link scrollto" href="#browser-support-section">Browser Support</a>
+                                <a class="nav-link scrollto" href="#change-log-section">Change Log</a>
+                                <a class="nav-link scrollto" href="#source-section">Source</a>
+                            </nav>
+                            <!--//doc-menu-->
+
+                        </div>
+                    </div>
+                    <!--//doc-sidebar-->
+                </div>
+                <!--//doc-body-->
+            </div>
+            <!--//container-->
+        </div>
+        <!--//doc-wrapper-->
+
+    </div>
+    <!--//page-wrapper-->
+
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a
+                    href="https://themes.3rdwavemedia.com/" target="_blank">Xiaoying Riley</a> for developers</small>
+        </div>
+        <!--//container-->
+    </footer>
+    <!--//footer-->
+
+    <!-- Main Javascript -->
+    <script type="text/javascript" src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
+</body>
+
+</html>
